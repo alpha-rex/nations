@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Nations Began</title>
+<meta name="theme-color" content="#16212b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--fg:#16212b;--mute:#566574;--line:#c9d1d9;--panel:#fff;--a:#2d6a9f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121b24;--fg:#e8edf1;--mute:#9aa9b6;--line:#2b3a47;--panel:#192530}}
+:root[data-theme="dark"]{--bg:#121b24;--fg:#e8edf1;--mute:#9aa9b6;--line:#2b3a47;--panel:#192530}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 Newsreader,"Noto Serif Bengali",Georgia,serif}
+main{max-width:860px;margin:0 auto;padding:28px 20px 64px}
+h1,h2,.f{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.05;margin:0 0 8px;font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 28px;max-width:56ch}
+.axis{position:relative;margin:0 0 8px;overflow-x:auto;padding-bottom:4px}
+.rail{display:flex;gap:6px;width:max-content;border-bottom:2px solid var(--line)}
+.rail button{flex:0 0 auto;min-width:108px;background:none;border:0;border-bottom:5px solid transparent;margin-bottom:-2px;padding:10px 2px 8px;color:var(--mute);cursor:pointer;text-align:left;font:inherit}
+.rail button b{display:block;font:700 .95rem "Bricolage Grotesque",Arial,sans-serif;color:var(--fg)}
+.rail button span{font-size:.85rem}
+.rail button[aria-pressed=true]{border-bottom-color:var(--c);color:var(--fg)}
+.rail button[aria-pressed=true] b{color:color-mix(in srgb,var(--c) 75%,var(--fg))}
+.map{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;margin:0 0 20px;max-width:760px}
+.map button{aspect-ratio:1;min-width:0;padding:0;font:700 clamp(.58rem,1.9vw,.85rem) "Bricolage Grotesque",Arial,sans-serif;color:var(--fg);background:color-mix(in srgb,var(--c) 30%,var(--panel));border:2px solid transparent;border-radius:6px;cursor:pointer}
+.map button[aria-pressed=true]{border-color:var(--fg);background:color-mix(in srgb,var(--c) 65%,var(--panel))}
+.cap{font-size:.85rem;color:var(--mute);margin:0 0 36px}
+button:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.head{border-left:8px solid var(--a);padding-left:16px;margin-bottom:20px}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin:0;font-weight:800;line-height:1.1}
+.tag{margin:4px 0 0;color:var(--mute);font-style:italic}
+.begin{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin:0 0 32px}
+.begin p{margin:0}
+h3{font:700 1.1rem "Bricolage Grotesque",Arial,sans-serif;margin:0 0 12px}
+ol{list-style:none;margin:0 0 32px;padding:0 0 0 18px;border-left:2px solid var(--line)}
+li{position:relative;padding:0 0 18px 20px}
+li::before{content:"";position:absolute;left:-26px;top:.6em;width:12px;height:12px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+li .y{font:700 1rem "Bricolage Grotesque",Arial,sans-serif;color:color-mix(in srgb,var(--a) 70%,var(--fg));display:block}
+.gift{border-top:1px solid var(--line);padding-top:16px}
+.gift p{margin:0}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px}
+.nav button{font:600 .95rem "Bricolage Grotesque",Arial,sans-serif;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:10px 16px;cursor:pointer}
+.b,.qa{font:600 .95rem "Bricolage Grotesque",Arial,sans-serif;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:10px 16px;cursor:pointer}
+#qb{margin:0 0 12px}#qz{margin:0 0 28px}
+#qz .box{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+#qz .box p{margin:0 0 8px}
+.qa{display:block;width:100%;text-align:left;margin:8px 0}
+.qa.ok{border:2px solid #2f8f5b}.qa.no{border:2px solid #b23a48}
+.pp{margin:0 0 32px;padding:0;list-style:none}
+.pp li{position:static;padding:0 0 8px}
+.pp li::before{content:none}
+.note{margin-top:40px;color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<button class="b" id="lg" style="float:right;margin:0 0 8px 12px"></button>
+<h1>How nations began</h1>
+<p class="sub">Twenty-five countries, each told from scratch: who was there first, what shaped it, and what it handed to the world. Pick one.</p>
+<div class="map" id="map" role="group" aria-label="World map of countries"></div>
+<p class="cap" style="margin:-8px 0 24px">Tap a tile to open a country. Tiles sit roughly where each country is on the globe; they are not drawn to scale.</p>
+<div class="axis"><div class="rail" id="rail" role="group" aria-label="Countries ordered by when the modern state took shape"></div></div>
+<p class="cap">Ordered by each nation's founding moment, oldest first. Scroll sideways for more. Choosing that moment is a judgement call; the timeline shows the longer story.</p>
+<button class="b" id="qb">Quiz me: 5 questions</button>
+<section id="qz" aria-live="polite"></section>
+<section id="view" aria-live="polite"></section>
+<div class="nav"><button id="prev">Previous country</button><button id="next">Next country</button></div>
+<p class="note">A short overview, not a full history. Dates are the commonly cited ones; many of these stories are still debated by historians.</p>
+</main>
+<script>
+const D=[
+{n:"United Kingdom",y:1707,k:"Union of England and Scotland",c:"#2d6a9f",
+tag:"Four nations stitched together over a thousand years.",
+b:"Britain was home to Celtic peoples when Rome invaded in 43 AD. After Rome left, Anglo-Saxon kingdoms formed, and in 1066 Normans from France conquered England. The Acts of Union in 1707 joined England and Scotland into Great Britain, and later unions added Ireland and, after 1922, left Northern Ireland as part of today's UK.",
+t:[["43 AD","Rome begins its conquest of Britain"],["c. 800s","Anglo-Saxon kingdoms unify into England under Wessex"],["1066","Norman conquest changes language, law and land ownership"],["1215","Magna Carta limits the king's power"],["1707","England and Scotland unite as Great Britain"],["1760s","Industrial Revolution begins"],["1922","Irish Free State leaves; Northern Ireland remains"]],
+g:"Parliamentary democracy, common law, the Industrial Revolution and the English language."},
+{n:"United States",y:1776,k:"Declaration of Independence",c:"#b23a48",
+tag:"A republic written down on purpose.",
+b:"Indigenous nations lived across North America for thousands of years before European settlers arrived. Britain founded Jamestown in 1607 and Plymouth in 1620. Thirteen colonies, angry about taxes without representation, declared independence on 4 July 1776, won the war, and wrote a Constitution in 1787 to hold a union together.",
+t:[["1607","Jamestown, the first lasting English colony"],["1620","Pilgrims land at Plymouth"],["1776","Declaration of Independence"],["1783","Britain recognizes independence in the Treaty of Paris"],["1787","Constitution is drafted in Philadelphia"],["1803","Louisiana Purchase doubles the country's size"],["1865","Civil War ends; slavery abolished by the 13th Amendment"]],
+g:"A written constitution, federalism, mass immigration, and much of modern technology and pop culture."},
+{n:"France",y:1789,k:"The Revolution",c:"#3a56b0",
+tag:"From Gaul to a republic built on rights.",
+b:"The land was Gaul, home to Celtic tribes, until Julius Caesar conquered it between 58 and 50 BCE. The Franks, led by Clovis, took over after Rome fell, and the name France comes from them. Kings slowly centralized power until the Revolution of 1789 swept away the monarchy and declared that people are born free and equal.",
+t:[["58–50 BCE","Caesar conquers Gaul"],["c. 496","Clovis, king of the Franks, is baptized"],["843","Treaty of Verdun splits Charlemagne's empire; West Francia emerges"],["987","Hugh Capet founds the Capetian dynasty"],["1337–1453","Hundred Years' War with England"],["1789","Revolution begins; Declaration of the Rights of Man"],["1958","Fifth Republic, still in place today"]],
+g:"Human rights as a political idea, the metric system, modern cuisine and a long tradition in art and philosophy."},
+{n:"Argentina",y:1816,k:"Declaration of Independence",c:"#3c93c4",
+tag:"A port city that became a nation.",
+b:"Indigenous peoples such as the Diaguita, Guaraní and Mapuche lived here first. Spain founded Buenos Aires in 1536 and refounded it in 1580. A revolt in May 1810 removed the Spanish viceroy, and delegates declared independence on 9 July 1816. Waves of European immigrants in the late 1800s shaped the modern country.",
+t:[["1536","Spanish found Buenos Aires (refounded 1580)"],["1776","Spain creates the Viceroyalty of the Río de la Plata"],["1810","May Revolution ousts the viceroy"],["1816","Independence declared in Tucumán"],["1853","First national Constitution"],["1880s–1910s","Millions of immigrants arrive, mostly from Italy and Spain"],["1983","Democracy returns after military rule"]],
+g:"Tango, a football culture that produced Maradona and Messi, and the literature of Borges."},
+{n:"Brazil",y:1822,k:"Independence from Portugal",c:"#2f8f5b",
+tag:"A colony that briefly became the seat of its own empire.",
+b:"Millions of Indigenous people lived here before Pedro Álvares Cabral reached the coast for Portugal in 1500. Sugar plantations built on enslaved African labor drove the colony. When the Portuguese court fled Napoleon to Rio in 1808, Brazil became the center of the empire, and Prince Pedro declared independence on 7 September 1822.",
+t:[["1500","Cabral lands; Portugal claims Brazil"],["1530s","Sugar economy and the Atlantic slave trade take hold"],["1808","Portuguese royal court moves to Rio de Janeiro"],["1822","Pedro I declares independence"],["1888","Slavery is abolished, last in the Americas"],["1889","Monarchy ends; republic proclaimed"],["1960","Brasília becomes the capital"]],
+g:"Carnival and samba, football's five World Cup titles, and the Amazon."},
+{n:"Germany",y:1871,k:"Unification under Prussia",c:"#c28a1a",
+tag:"A people for centuries, a single state for barely 150 years.",
+b:"Germanic tribes pushed back Rome in 9 AD. Charlemagne's empire and then the Holy Roman Empire (962) ruled a patchwork of hundreds of states. Napoleon dissolved that empire in 1806, and Otto von Bismarck of Prussia united the German states into one empire in 1871. The country was split after World War II and reunified on 3 October 1990.",
+t:[["9 AD","Germanic tribes defeat Roman legions at Teutoburg Forest"],["962","Otto I crowned; the Holy Roman Empire begins"],["c. 1450","Gutenberg's printing press, Mainz"],["1517","Luther starts the Reformation"],["1871","German Empire proclaimed at Versailles"],["1949","Divided into West and East Germany"],["1990","Reunification"]],
+g:"The printing press, the Reformation, great composers like Bach and Beethoven, and modern engineering."},
+{n:"Bangladesh",y:1971,k:"Liberation War",c:"#1f8a70",
+tag:"A nation born from a language.",
+b:"The Bengal delta has hosted kingdoms for over two thousand years, including the Pala Empire and the Bengal Sultanate, before Mughal and then British rule. In 1947 it became East Pakistan. After protests over the Bengali language in 1952 and an election win ignored in 1970, a nine-month war ended with independence on 16 December 1971.",
+t:[["c. 750","Pala Empire rises in Bengal"],["1352","Bengal Sultanate unites the region"],["1757","British East India Company takes control of Bengal"],["1947","Becomes East Pakistan"],["1952","Language Movement; students killed demanding Bengali"],["26 Mar 1971","Independence declared"],["16 Dec 1971","Pakistani forces surrender; Bangladesh is free"]],
+g:"International Mother Language Day, microcredit through Grameen Bank, and a major textile industry."},
+{n:"Russia",y:1991,k:"Russian Federation",c:"#6a4c93",
+tag:"From a river-trading federation to the largest country on Earth.",
+b:"East Slavic tribes lived along the rivers. Scandinavian-led rulers organized the state of Rus' around Novgorod and Kyiv from about 862, and Prince Vladimir adopted Orthodox Christianity in 988. Mongol rule from 1240 shaped Moscow, which grew powerful and threw off Mongol overlordship by 1480. Tsars expanded east to the Pacific; after the 1917 revolutions came the USSR, and the Russian Federation emerged in 1991.",
+t:[["c. 862","Rurik rules in Novgorod; Rus' takes shape"],["988","Vladimir adopts Orthodox Christianity"],["1240","Mongols sack Kyiv and dominate the region"],["1480","Ivan III ends Mongol overlordship"],["1547","Ivan IV crowned first tsar"],["1721","Peter the Great declares the Russian Empire"],["1917","Revolutions end the monarchy"],["1922","USSR formed"],["1991","USSR dissolves; Russian Federation stands alone"]],
+g:"Tolstoy and Dostoevsky, Tchaikovsky, the first satellite and first human in space."},
+{n:"Egypt",y:-3100,k:"Upper and Lower Egypt unified",c:"#b8860b",
+tag:"A state on the Nile that lasted three thousand years.",
+b:"People settled the Nile valley long before writing began. Around 3100 BCE, traditionally under King Narmer, Upper and Lower Egypt were joined into one kingdom. Pharaohs ruled for about three thousand years until Rome absorbed Egypt in 30 BCE. Arabs brought Islam and the Arabic language in 641, and modern Egypt became a republic in 1953.",
+t:[["c. 3100 BCE","Egypt unified under the first pharaohs"],["c. 2560 BCE","Great Pyramid of Giza built for Khufu"],["196 BCE","Rosetta Stone carved"],["30 BCE","Cleopatra dies; Egypt becomes Roman"],["641","Arab conquest brings Islam"],["1869","Suez Canal opens"],["1953","Republic declared"]],
+g:"Hieroglyphic writing, monumental architecture, and early medicine and mathematics."},
+{n:"China",y:-221,k:"Qin unifies China",c:"#c0392b",
+tag:"One of the longest continuous civilizations on Earth.",
+b:"Farming communities grew along the Yellow River thousands of years ago, and the Shang dynasty left China's earliest writing around 1600 BCE. Warring states fought for centuries until Qin Shi Huang unified them in 221 BCE and called himself the first emperor. Dynasties rose and fell for two thousand years until the last emperor abdicated in 1912. The People's Republic was founded in 1949.",
+t:[["c. 1600 BCE","Shang dynasty; oracle-bone writing"],["551 BCE","Confucius is born"],["221 BCE","Qin Shi Huang unifies China"],["206 BCE","Han dynasty; the Silk Road opens"],["1912","Last emperor abdicates; republic begins"],["1949","People's Republic of China founded"]],
+g:"Paper, printing, gunpowder and the compass, plus Confucian thought and tea."},
+{n:"Spain",y:1492,k:"Granada falls; the crowns are joined",c:"#e0a030",
+tag:"Where Rome, Islam and Christianity overlapped.",
+b:"Iberia was home to Iberians and Celts, then ruled by Rome as Hispania. After Visigothic rule, Muslim forces crossed from Africa in 711 and built al-Andalus, while Christian kingdoms pushed south over centuries. Isabella of Castile and Ferdinand of Aragon joined their crowns in 1479, and Granada fell in 1492, the year Columbus sailed.",
+t:[["218 BCE","Rome begins conquering Hispania"],["711","Muslim conquest; al-Andalus begins"],["1479","Castile and Aragon joined by marriage"],["1492","Granada falls; Columbus's first voyage"],["1588","Spanish Armada defeated"],["1978","Democratic constitution after Franco"]],
+g:"Spanish, spoken by over 500 million people, plus Cervantes, flamenco and Picasso."},
+{n:"Mexico",y:1821,k:"Independence from Spain",c:"#4f8a2e",
+tag:"From the Aztec capital to a modern republic.",
+b:"Olmec, Maya and Aztec civilizations built great cities long before Spain arrived. Hernán Cortés and his Indigenous allies toppled the Aztec capital Tenochtitlan in 1521, and New Spain was ruled from there for 300 years. Father Miguel Hidalgo's call for freedom in 1810 began the war of independence, which ended in 1821.",
+t:[["c. 1200 BCE","Olmec civilization"],["c. 250–900","Classic Maya cities"],["1325","Aztecs found Tenochtitlan"],["1521","Spanish conquest of Tenochtitlan"],["1810","Grito de Dolores begins the independence war"],["1821","Independence achieved"],["1910","Mexican Revolution begins"]],
+g:"Chocolate and maize, mariachi, and the muralist art of Diego Rivera."},
+{n:"Italy",y:1861,k:"Unification (the Risorgimento)",c:"#7a8f2e",
+tag:"The heart of Rome, a nation of city-states.",
+b:"Rome grew from a town on the Tiber, traditionally founded in 753 BCE, into an empire that ruled the Mediterranean. After it fell in 476, Italy split into city-states, kingdoms and papal lands, and the Renaissance began in Florence in the 1300s. Garibaldi, Cavour and others united the peninsula, and the Kingdom of Italy was proclaimed in 1861.",
+t:[["753 BCE","Traditional founding of Rome"],["27 BCE","Augustus becomes first Roman emperor"],["476","Western Roman Empire falls"],["1300s","Renaissance begins in Florence"],["1861","Kingdom of Italy proclaimed"],["1946","Referendum ends the monarchy"]],
+g:"Roman law, the Renaissance, opera and a world-famous food culture."},
+{n:"Japan",y:1868,k:"Meiji Restoration",c:"#a93d6b",
+tag:"An island nation that rebuilt itself twice.",
+b:"Early communities of the Jōmon and Yayoi periods fished and farmed across the islands. A court at Yamato took shape by about the 5th century, and from 1185 samurai warlords called shoguns held real power while emperors remained symbolic. Japan stayed largely closed from the 1630s until American ships arrived in 1853. The Meiji Restoration of 1868 returned power to the emperor and began rapid modernization.",
+t:[["c. 300 BCE","Yayoi culture brings rice farming"],["710","First permanent capital at Nara"],["1185","Kamakura shogunate; samurai rule begins"],["1603","Tokugawa shogunate; long peace and isolation"],["1853","Commodore Perry's ships arrive"],["1868","Meiji Restoration"],["1947","Postwar pacifist constitution"]],
+g:"Anime and manga, bullet trains, Zen aesthetics and precision manufacturing."},
+{n:"Australia",y:1901,k:"Federation of six colonies",c:"#d19a1e",
+tag:"The oldest living cultures, one of the youngest nations.",
+b:"Aboriginal and Torres Strait Islander peoples have lived here for at least 60,000 years, the longest continuous cultures known. Britain claimed the east coast in 1770 and founded a penal colony at Sydney in 1788. Six colonies joined to form the Commonwealth of Australia on 1 January 1901.",
+t:[["60,000+ years ago","First peoples settle the continent"],["1770","James Cook claims the east coast for Britain"],["1788","First Fleet founds Sydney"],["1851","Gold rush begins"],["1901","Federation"],["1967","Referendum counts Aboriginal people in the census"]],
+g:"Aboriginal art and Dreaming stories, and a federal system of six states."},
+{n:"Turkey",y:1923,k:"Republic declared by Atatürk",c:"#8e3b2f",
+tag:"Built from the ruins of a world empire.",
+b:"Anatolia hosted Hittites, Greeks, Romans and Byzantines. Turkic peoples arrived after 1071, and Osman founded the Ottoman state around 1299. The Ottomans took Constantinople in 1453 and ruled lands across three continents. After defeat in World War I, Mustafa Kemal Atatürk led a war of independence and declared the republic on 29 October 1923.",
+t:[["c. 1600 BCE","Hittite kingdom in Anatolia"],["330","Constantinople becomes the Roman capital"],["1071","Seljuk Turks win at Manzikert"],["1299","Ottoman state founded"],["1453","Mehmed II conquers Constantinople"],["1923","Republic declared"]],
+g:"Ottoman architecture, Turkish cuisine and the spread of coffeehouses."},
+{n:"Nigeria",y:1960,k:"Independence from Britain",c:"#1b7a4a",
+tag:"Hundreds of peoples, one federation.",
+b:"The Nok culture made iron tools and terracotta art here by 1000 BCE. Kingdoms such as Benin, Oyo and the Hausa states flourished, and Islam spread in the north. Britain took control through the 1800s and merged north and south in 1914. Nigeria became independent on 1 October 1960.",
+t:[["c. 1000 BCE","Nok culture"],["c. 1100s","Ife and Benin kingdoms grow"],["1804","Usman dan Fodio founds the Sokoto Caliphate"],["1914","British merge north and south"],["1960","Independence"],["1967–70","Civil war"]],
+g:"Afrobeats, Nollywood and writers like Chinua Achebe."},
+{n:"Canada",y:1867,k:"Confederation",c:"#d6455d",
+tag:"Peoples of the north, two colonial languages, one federation.",
+b:"First Nations, Inuit and Métis peoples have lived across the land for thousands of years. France founded Quebec in 1608, and Britain won New France in 1763. On 1 July 1867 three British colonies joined as the Dominion of Canada, and more provinces followed. Full legal independence from Britain came step by step, ending with the Constitution Act of 1982.",
+t:[["1534","Jacques Cartier claims land for France"],["1608","Champlain founds Quebec City"],["1763","Britain wins New France"],["1867","Confederation"],["1885","Transcontinental railway completed"],["1982","Constitution brought home from Britain"]],
+g:"Multicultural federalism, maple syrup and ice hockey."},
+{n:"Pakistan",y:1947,k:"Independence and Partition",c:"#5c8a1e",
+tag:"A homeland created from a shared faith and a shared history.",
+b:"The Indus Valley was home to one of the world's earliest cities, Mohenjo-daro, around 2500 BCE. Islam arrived with Arab forces in 711, and Mughal rule followed. British India was divided on 14 and 15 August 1947, and Pakistan was created as a homeland for South Asia's Muslims, in two wings. The eastern wing became Bangladesh in 1971.",
+t:[["c. 2500 BCE","Indus Valley cities such as Mohenjo-daro thrive"],["711","Muhammad bin Qasim brings Islam to Sindh"],["1526","Mughal Empire founded"],["1940","Lahore Resolution calls for Muslim-majority states"],["1947","Pakistan created at Partition"],["1956","First constitution makes it a republic"],["1971","Eastern wing becomes Bangladesh"]],
+g:"Sufi music and qawwali, the Karakoram mountains and a deep cricket tradition."},
+{n:"Indonesia",y:1945,k:"Proclamation of Independence",c:"#b5382f",
+tag:"Seventeen thousand islands, one national language.",
+b:"Early kingdoms such as Srivijaya and Majapahit grew from sea trade across the islands, and Islam spread from the 1200s. The Dutch East India Company arrived in 1602 and the Netherlands ruled for most of the next 300 years. Sukarno proclaimed independence on 17 August 1945, and the Dutch recognized it in 1949.",
+t:[["c. 600s","Srivijaya trading empire"],["1293","Majapahit Empire founded in Java"],["1602","Dutch East India Company founded"],["1928","Youth Pledge adopts one language, Indonesian"],["1945","Independence proclaimed"],["1949","Netherlands recognizes sovereignty"]],
+g:"Batik, gamelan music, and the world's largest Muslim-majority population."},
+{n:"South Africa",y:1994,k:"First all-race election",c:"#2e8a8a",
+tag:"A rainbow nation built after apartheid.",
+b:"The Khoisan peoples lived here for tens of thousands of years, and Bantu-speaking farmers arrived over the last two thousand. The Dutch set up a Cape station in 1652, and Britain took the Cape in 1806. The Union of South Africa formed in 1910, and from 1948 apartheid enforced racial segregation. Nelson Mandela was freed in 1990, and the first all-race election was held on 27 April 1994.",
+t:[["1652","Dutch settle at Cape Town"],["1806","Britain takes control of the Cape"],["1910","Union of South Africa formed"],["1948","Apartheid becomes official policy"],["1990","Mandela released from prison"],["1994","First all-race election; Mandela becomes president"]],
+g:"The Truth and Reconciliation Commission model, and Nelson Mandela's example."},
+{n:"South Korea",y:1948,k:"Republic of Korea founded",c:"#4a5fc1",
+tag:"Rebuilt from a divided, war-torn peninsula.",
+b:"Korea's earliest kingdoms date back over two thousand years, and the Joseon dynasty ruled from 1392 until the early 1900s. Japan annexed Korea in 1910. After World War II the peninsula was divided at the 38th parallel, and the Republic of Korea was founded in the south on 15 August 1948. War from 1950 to 1953 left the division in place.",
+t:[["1392","Joseon dynasty begins"],["1443","King Sejong creates the Hangul alphabet"],["1910","Japan annexes Korea"],["1945","Liberation; peninsula divided"],["1948","Republic of Korea founded"],["1950–53","Korean War ends in an armistice"],["1987","Democratic transition"]],
+g:"Hangul, K-pop and Korean cinema, and world-leading electronics."},
+{n:"Iran",y:-550,k:"Cyrus founds the Achaemenid Empire",c:"#35838f",
+tag:"Persia's heir, one of the oldest continuous states.",
+b:"Elamites and early Persian peoples lived on the plateau for millennia. Around 550 BCE, Cyrus the Great founded the Achaemenid Empire, then the largest the world had seen. Arab armies brought Islam in the 600s, and Persian culture blended with it. The Safavids made Shia Islam the state faith in 1501, and the Islamic Republic was established in 1979.",
+t:[["550 BCE","Cyrus the Great founds the Achaemenid Empire"],["330 BCE","Alexander burns Persepolis"],["651","Sasanian Empire falls to Arab armies"],["1501","Safavids make Shia Islam the state faith"],["1925","Pahlavi dynasty begins"],["1979","Islamic Republic established"]],
+g:"Persian poetry, carpets, and early models of empire administration."},
+{n:"Saudi Arabia",y:1932,k:"Kingdom declared by Ibn Saud",c:"#8a6d2b",
+tag:"Birthplace of Islam, unified as a kingdom less than a century ago.",
+b:"Arabian tribes traded across the desert for millennia. Islam began in Mecca around 610 and spread from Arabia within a century. The first Saudi state formed in 1744. Abdulaziz ibn Saud retook Riyadh in 1902 and declared the Kingdom of Saudi Arabia in 1932. Oil was discovered in 1938.",
+t:[["c. 610","First revelations to Muhammad in Mecca"],["622","Hijra to Medina; the Islamic calendar begins"],["1744","First Saudi state"],["1902","Ibn Saud captures Riyadh"],["1932","Kingdom of Saudi Arabia declared"],["1938","Oil discovered"]],
+g:"The two holy cities of Islam, the Arabic-language tradition and a major share of the world's oil."},
+{n:"Ethiopia",y:1896,k:"Victory at Adwa secures independence",c:"#3d9970",
+tag:"The African nation that stayed free.",
+b:"Human ancestors lived here millions of years ago, and the fossil 'Lucy' was found in Ethiopia. The kingdom of Aksum traded across the Red Sea from about the 1st century and adopted Christianity in the 4th. Emperors ruled for much of the next 1,600 years. In 1896, Emperor Menelik II defeated an Italian invasion at Adwa, keeping Ethiopia independent.",
+t:[["3.2 million years ago","'Lucy' lives; her skeleton is found in 1974"],["c. 100","Aksum becomes a major trading kingdom"],["c. 330","Aksum adopts Christianity"],["1270","Solomonic dynasty begins"],["1896","Victory over Italy at Adwa"],["1974","Monarchy ends"],["1995","Federal constitution adopted"]],
+g:"Coffee, the Ge'ez script, and a lasting symbol of African independence."}
+];
+let bn=false;try{bn=localStorage.getItem('lang')==='bn'}catch(e){}
+if(location.hash==='#bn')bn=true;if(location.hash==='#en')bn=false;
+const U=bn?{"h1": "জাতিগুলো যেভাবে শুরু হলো", "sub": "২৫টি দেশ, শুরু থেকে বলা: কারা প্রথম ছিল, কী তাদের গড়ে তুলেছে, আর বিশ্বকে তারা কী দিয়েছে। একটি বেছে নিন।", "qb": "কুইজ: ৫টি প্রশ্ন", "c0": "একটি ঘরে ট্যাপ করে দেশ খুলুন। ঘরগুলো মোটামুটি পৃথিবীতে দেশের অবস্থান অনুযায়ী বসানো; মাপ আসল নয়।", "c1": "প্রতিটি দেশের প্রতিষ্ঠার মুহূর্ত অনুযায়ী সাজানো, সবচেয়ে পুরোনো আগে। আরও দেখতে পাশে স্ক্রল করুন।", "pv": "আগের দেশ", "nx": "পরের দেশ", "nn": "এটি সংক্ষিপ্ত পরিচিতি, পূর্ণ ইতিহাস নয়। তারিখগুলো সাধারণভাবে উল্লিখিত; অনেক বিষয়ে ইতিহাসবিদদের মধ্যে এখনও বিতর্ক আছে।", "nt": "এই দেশের বিস্তারিত অংশ আপাতত ইংরেজিতে; বাংলা অনুবাদ ধাপে ধাপে যোগ হচ্ছে।", "fm": "প্রতিষ্ঠার মুহূর্ত", "hb": "কীভাবে শুরু হলো", "lr": "দীর্ঘ পথচলা", "pp": "যাঁরা গড়েছেন", "gw": "বিশ্বকে যা দিয়েছে", "qn": "প্রশ্ন", "sc": "আপনার স্কোর", "pa": "আবার খেলুন", "wc": "এটি কোন দেশ সম্পর্কে?", "ok": "সঠিক।", "no": "ঠিক হয়নি। উত্তর:", "nq": "পরের প্রশ্ন", "ss": "স্কোর দেখুন"}:{"fm": "Founding moment", "hb": "How it began", "lr": "The long road", "pp": "People who shaped it", "gw": "What it gave the world", "qn": "Question", "sc": "Your score", "pa": "Play again", "wc": "Which country is this about?", "ok": "Correct.", "no": "Not quite. The answer is", "nq": "Next question", "ss": "See score", "nt": ""};
+const NB={"United Kingdom": "যুক্তরাজ্য", "United States": "যুক্তরাষ্ট্র", "France": "ফ্রান্স", "Argentina": "আর্জেন্টিনা", "Brazil": "ব্রাজিল", "Germany": "জার্মানি", "Bangladesh": "বাংলাদেশ", "Russia": "রাশিয়া", "Egypt": "মিশর", "China": "চীন", "Spain": "স্পেন", "Mexico": "মেক্সিকো", "Italy": "ইতালি", "Japan": "জাপান", "Australia": "অস্ট্রেলিয়া", "Turkey": "তুরস্ক", "Nigeria": "নাইজেরিয়া", "Canada": "কানাডা", "Pakistan": "পাকিস্তান", "Indonesia": "ইন্দোনেশিয়া", "South Africa": "দক্ষিণ আফ্রিকা", "South Korea": "দক্ষিণ কোরিয়া", "Iran": "ইরান", "Saudi Arabia": "সৌদি আরব", "Ethiopia": "ইথিওপিয়া"},TB={"United Kingdom": "এক হাজার বছরে জোড়া লাগা চারটি জাতি।", "United States": "ইচ্ছা করেই লিখে গড়া এক প্রজাতন্ত্র।", "France": "গল থেকে অধিকারের ভিত্তিতে গড়া প্রজাতন্ত্র।", "Argentina": "একটি বন্দর-নগর, যা হয়ে উঠল একটি জাতি।", "Brazil": "একটি উপনিবেশ, যা কিছুকাল নিজেই সাম্রাজ্যের কেন্দ্র ছিল।", "Germany": "বহু শতাব্দীর জাতি, মাত্র দেড়শো বছরের রাষ্ট্র।", "Bangladesh": "ভাষার জন্য জন্ম নেওয়া এক জাতি।", "Russia": "নদীপথের বাণিজ্যসংঘ থেকে পৃথিবীর বৃহত্তম দেশ।", "Egypt": "নীল নদের তীরে তিন হাজার বছর টিকে থাকা রাষ্ট্র।", "China": "পৃথিবীর অন্যতম প্রাচীন অবিচ্ছিন্ন সভ্যতা।", "Spain": "যেখানে রোম, ইসলাম ও খ্রিষ্টধর্ম মিশেছিল।", "Mexico": "অ্যাজটেক রাজধানী থেকে আধুনিক প্রজাতন্ত্র।", "Italy": "রোমের হৃদয়, নগর-রাষ্ট্রের দেশ।", "Japan": "দুবার নিজেকে নতুন করে গড়া এক দ্বীপরাষ্ট্র।", "Australia": "সবচেয়ে প্রাচীন জীবন্ত সংস্কৃতি, সবচেয়ে তরুণ জাতিগুলোর একটি।", "Turkey": "এক বিশ্বসাম্রাজ্যের ধ্বংসাবশেষ থেকে গড়া দেশ।", "Nigeria": "শত শত জনগোষ্ঠী, একটি ফেডারেশন।", "Canada": "উত্তরের মানুষ, দুই ঔপনিবেশিক ভাষা, একটি ফেডারেশন।", "Pakistan": "অভিন্ন বিশ্বাস ও ইতিহাস থেকে গড়া এক আবাসভূমি।", "Indonesia": "সতেরো হাজার দ্বীপ, একটি জাতীয় ভাষা।", "South Africa": "বর্ণবৈষম্যের পর গড়া রামধনু জাতি।", "South Korea": "বিভক্ত, যুদ্ধবিধ্বস্ত উপদ্বীপ থেকে নতুন করে গড়া দেশ।", "Iran": "পারস্যের উত্তরসূরি, প্রাচীনতম অবিচ্ছিন্ন রাষ্ট্রগুলোর একটি।", "Saudi Arabia": "ইসলামের জন্মভূমি, এক শতকেরও কম আগে রাজ্য হিসেবে ঐক্যবদ্ধ।", "Ethiopia": "আফ্রিকার সেই জাতি, যে স্বাধীন থেকে গেছে।"},BB={"Bangladesh": ["বাংলার বদ্বীপ দুই হাজার বছরেরও বেশি সময় ধরে নানা রাজ্যের আবাস, যার মধ্যে পাল সাম্রাজ্য ও বাংলার সুলতানি আমল উল্লেখযোগ্য। পরে আসে মুঘল ও ব্রিটিশ শাসন। ১৯৪৭ সালে এটি পূর্ব পাকিস্তান হয়। ১৯৫২ সালে বাংলা ভাষার জন্য আন্দোলন এবং ১৯৭০ সালের নির্বাচনের ফল উপেক্ষিত হওয়ার পর নয় মাসের যুদ্ধ শেষে ১৯৭১ সালের ১৬ ডিসেম্বর স্বাধীনতা আসে।", "আন্তর্জাতিক মাতৃভাষা দিবস, গ্রামীণ ব্যাংকের মাধ্যমে ক্ষুদ্রঋণ, এবং বিশাল পোশাকশিল্প।"]};
+const nm=d=>bn?NB[d.n]||d.n:d.n,tg=d=>bn?TB[d.n]||d.tag:d.tag,bd=d=>bn&&BB[d.n]?BB[d.n][0]:d.b,gf=d=>bn&&BB[d.n]?BB[d.n][1]:d.g;
+D.sort((a,b)=>a.y-b.y);const Y=y=>y<0?Math.abs(y)+" BCE":y;let i=0;
+const R=document.getElementById('rail'),V=document.getElementById('view');
+const M={"Canada":[2,0,"CAN"],"United States":[2,1,"USA"],"Mexico":[2,2,"MEX"],"Brazil":[4,4,"BRA"],"Argentina":[3,6,"ARG"],"United Kingdom":[6,0,"GBR"],"France":[6,1,"FRA"],"Germany":[7,1,"DEU"],"Spain":[6,2,"ESP"],"Italy":[7,2,"ITA"],"Russia":[9,0,"RUS"],"Turkey":[8,2,"TUR"],"Egypt":[7,3,"EGY"],"Saudi Arabia":[8,3,"SAU"],"Iran":[9,2,"IRN"],"Pakistan":[10,2,"PAK"],"China":[11,1,"CHN"],"Bangladesh":[11,2,"BGD"],"South Korea":[12,1,"KOR"],"Japan":[13,1,"JPN"],"Nigeria":[6,4,"NGA"],"Ethiopia":[8,4,"ETH"],"South Africa":[7,6,"ZAF"],"Indonesia":[12,4,"IDN"],"Australia":[13,6,"AUS"]};
+const T=document.getElementById('map');
+D.forEach((d,j)=>{const m=M[d.n];if(!m)return;const b=document.createElement('button');b.style.cssText='--c:'+d.c+';grid-column:'+(m[0]+1)+';grid-row:'+(m[1]+1);b.textContent=m[2];b.title=d.n;b.setAttribute('aria-label',nm(d));b.onclick=()=>show(j,true);T.appendChild(b)});
+D.forEach((d,j)=>{const b=document.createElement('button');b.style.setProperty('--c',d.c);b.innerHTML='<b>'+nm(d)+'</b><span>'+Y(d.y)+'</span>';b.onclick=()=>show(j,true);R.appendChild(b)});
+const P={"United Kingdom":["Elizabeth I|queen during England's golden age","Isaac Newton|scientist who described gravity and motion","Winston Churchill|prime minister through World War II"],
+"United States":["George Washington|first president","Abraham Lincoln|president who led the Union and ended slavery","Martin Luther King Jr.|civil rights leader"],
+"France":["Joan of Arc|teenage military leader in the Hundred Years' War","Napoleon Bonaparte|general who became emperor in 1804","Voltaire|Enlightenment writer who defended free speech"],
+"Argentina":["José de San Martín|general who helped free the south of South America","Eva Perón|first lady and champion of workers' rights","Jorge Luis Borges|writer of short stories and essays"],
+"Brazil":["Pedro I|declared independence in 1822","Princess Isabel|signed the law abolishing slavery in 1888","Alberto Santos-Dumont|aviation pioneer"],
+"Germany":["Johannes Gutenberg|inventor of European movable-type printing","Martin Luther|started the Reformation","Otto von Bismarck|chancellor who united Germany in 1871"],
+"Bangladesh":["Sheikh Mujibur Rahman|leader of the independence movement","Kazi Nazrul Islam|national poet","Muhammad Yunus|founder of microcredit banking, Nobel Peace Prize 2006"],
+"Russia":["Peter the Great|tsar who modernized Russia","Leo Tolstoy|author of War and Peace","Yuri Gagarin|first human in space, 1961"],
+"Egypt":["Narmer|traditional unifier of Egypt","Ramesses II|long-reigning pharaoh and builder","Cleopatra VII|last active ruler of Ptolemaic Egypt"],
+"China":["Qin Shi Huang|first emperor of a unified China","Confucius|teacher whose ideas shaped Chinese society","Sun Yat-sen|leader of the 1911 revolution"],
+"Spain":["Isabella I|queen of Castile who sponsored Columbus","Miguel de Cervantes|author of Don Quixote","Pablo Picasso|painter and co-founder of Cubism"],
+"Mexico":["Miguel Hidalgo|priest who began the independence war","Benito Juárez|reformist president","Frida Kahlo|painter"],
+"Italy":["Julius Caesar|Roman general and statesman","Leonardo da Vinci|painter and inventor of the Renaissance","Giuseppe Garibaldi|general of Italian unification"],
+"Japan":["Tokugawa Ieyasu|founded the shogunate that ruled for 250 years","Murasaki Shikibu|author of The Tale of Genji","Emperor Meiji|figurehead of rapid modernization"],
+"Australia":["Edmund Barton|first prime minister","Eddie Mabo|led the land rights case that overturned terra nullius","Don Bradman|cricket's greatest batsman"],
+"Turkey":["Mehmed II|conqueror of Constantinople","Suleiman the Magnificent|Ottoman sultan at the empire's peak","Mustafa Kemal Atatürk|founder of the republic"],
+"Nigeria":["Usman dan Fodio|founder of the Sokoto Caliphate","Nnamdi Azikiwe|first president","Chinua Achebe|author of Things Fall Apart"],
+"Canada":["Samuel de Champlain|founder of Quebec City","John A. Macdonald|first prime minister","Terry Fox|runner who raised money for cancer research"],
+"Pakistan":["Muhammad Ali Jinnah|founder of Pakistan","Allama Iqbal|poet and philosopher","Malala Yousafzai|education activist, Nobel Peace Prize 2014"],
+"Indonesia":["Sukarno|first president","Kartini|pioneer of women's education","Gajah Mada|Majapahit prime minister"],
+"South Africa":["Nelson Mandela|anti-apartheid leader and first democratic president","Desmond Tutu|archbishop and peace activist","Shaka|Zulu king who built a powerful kingdom"],
+"South Korea":["King Sejong|creator of the Hangul alphabet","Admiral Yi Sun-sin|naval hero against Japanese invasions","Syngman Rhee|first president"],
+"Iran":["Cyrus the Great|founder of the Achaemenid Empire","Hafez|14th-century poet","Shah Ismail I|founder of the Safavid dynasty"],
+"Saudi Arabia":["Muhammad|Prophet of Islam, born in Mecca","Ibn Saud|founder of the kingdom","King Faisal|modernizing ruler from 1964 to 1975"],
+"Ethiopia":["Menelik II|emperor who won at Adwa","Haile Selassie|last emperor","Abebe Bikila|Olympic marathon champion"]};
+let q={i:0,s:0};const Z=document.getElementById('qz');
+function startQuiz(){q={i:0,s:0};ask()}
+function ask(){
+ if(q.i>=5){Z.innerHTML='<div class="box"><h3>'+U.sc+': '+q.s+'/5</h3><button class="b" id="again">'+U.pa+'</button></div>';document.getElementById('again').onclick=startQuiz;return}
+ const c=D[Math.floor(Math.random()*D.length)];
+ const ok=c.t.filter(e=>!e[1].includes(c.n)),L=ok.length?ok:c.t,e=L[Math.floor(Math.random()*L.length)];
+ const o=[c].concat(D.filter(x=>x!==c).sort(()=>Math.random()-.5).slice(0,3)).sort(()=>Math.random()-.5);
+ Z.innerHTML='<div class="box"><h3>'+U.qn+' '+(q.i+1)+'/5</h3><p>'+e[0]+': '+e[1]+'. '+U.wc+'</p><div id="ops"></div><p id="fb"></p></div>';
+ const ops=document.getElementById('ops'),fb=document.getElementById('fb');
+ o.forEach(x=>{const b=document.createElement('button');b.className='qa';b.textContent=nm(x);b.onclick=()=>{
+  [...ops.children].forEach(y=>{y.disabled=true;if(y.textContent==nm(c))y.classList.add('ok')});
+  if(x===c){q.s++;fb.textContent=U.ok}else{b.classList.add('no');fb.textContent=U.no+' '+nm(c)}
+  const nx=document.createElement('button');nx.className='b';nx.textContent=q.i<4?U.nq:U.ss;nx.onclick=()=>{q.i++;ask()};
+  fb.appendChild(document.createElement('br'));fb.appendChild(nx);nx.focus()};ops.appendChild(b)});
+}
+document.getElementById('qb').onclick=()=>{startQuiz();Z.scrollIntoView({block:'nearest'})};
+function show(j,scroll){
+ i=(j+D.length)%D.length;const d=D[i];
+ [...R.children].forEach((b,k)=>b.setAttribute('aria-pressed',k==i));
+ [...T.children].forEach(b=>b.setAttribute('aria-pressed',b.title==d.n));
+ document.documentElement.style.setProperty('--a',d.c);
+ V.innerHTML='<div class="head"><h2>'+nm(d)+'</h2><p class="tag">'+tg(d)+'</p><p class="tag">'+U.fm+': '+d.k+' ('+Y(d.y)+')</p></div>'+
+ (bn&&!BB[d.n]?'<p class="tag">'+U.nt+'</p>':'')+'<div class="begin"><h3>'+U.hb+'</h3><p>'+bd(d)+'</p></div>'+
+ '<h3>'+U.lr+'</h3><ol>'+d.t.map(e=>'<li><span class="y">'+e[0]+'</span>'+e[1]+'</li>').join('')+'</ol>'+
+ '<h3>'+U.pp+'</h3><ul class="pp">'+(P[d.n]||[]).map(s=>{const a=s.split('|');return '<li><b>'+a[0]+'</b>, '+a[1]+'</li>'}).join('')+'</ul>'+
+ '<div class="gift"><h3>'+U.gw+'</h3><p>'+gf(d)+'</p></div>';
+ if(scroll)V.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+}
+document.getElementById('prev').onclick=()=>show(i-1,true);
+document.getElementById('next').onclick=()=>show(i+1,true);
+const lg=document.getElementById('lg');lg.textContent=bn?'English':'বাংলা';
+lg.onclick=()=>{try{localStorage.setItem('lang',bn?'en':'bn')}catch(e){}location.hash=bn?'#en':'#bn';location.reload()};
+if(bn){document.documentElement.lang='bn';document.title=U.h1;document.querySelector('h1').textContent=U.h1;document.querySelector('.sub').textContent=U.sub;document.getElementById('qb').textContent=U.qb;const cp=document.querySelectorAll('.cap');cp[0].textContent=U.c0;cp[1].textContent=U.c1;document.getElementById('prev').textContent=U.pv;document.getElementById('next').textContent=U.nx;document.querySelector('.note').textContent=U.nn}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+show(0,false);
+</script>
+</body>
+</html>
